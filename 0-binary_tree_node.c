@@ -9,16 +9,16 @@
  */
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-    binary_tree_t *new = malloc(sizeof(binary_tree_t));
+	binary_tree_t *new = malloc(sizeof(binary_tree_t));
 
-    if (!new)
-    {
-        printf("Failed to malloc new node\n");
-        return (NULL);
-    }
+	if (!new)
+	{
+		printf("Failed to malloc new node\n");
+		return (NULL);
+	}
 
-    new->n = value;
-    new->parent = parent;
+	new->n = value;
+	new->parent = parent;
 
-    return (new);
+	return (new);
 }
