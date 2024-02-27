@@ -13,7 +13,6 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 
 	if (!new)
 	{
-		printf("Failed to malloc new node\n");
 		return (NULL);
 	}
 
