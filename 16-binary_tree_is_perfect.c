@@ -8,8 +8,24 @@
  */
 int perfect_tree(const binary_tree_t *tree)
 {
-	
+	int right = 0, left = 0;
 
+	if (tree == NULL)
+		return (0);
+
+	if (tree->right == NULL && tree->left == NULL)
+		return (1);
+
+	if (tree->left != NULL || tree->right == NULL)
+	{
+		right = 1 + perfect_tree(tree->right);
+		left = 1 + perfect_tree(tree->left);
+		if (right == left && right && left)
+			return (left + right);
+		return (0);
+	}
+	else
+		return (0);
 }
 
 /**
@@ -19,10 +35,10 @@ int perfect_tree(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    int balance = binary_tree_balance_d(tree);
+	int balance = perfect_tree(tree);
 
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    return (balance == 0? 1 : 0);
+	return (balance != 0 ? 1: 0);
 }
