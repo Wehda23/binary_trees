@@ -1,7 +1,7 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_height_d - function that measures the height of a binary tree
+ * binary_tree_height_dd - function that measures the height of a binary tree
  * @tree: Pointer to the node in binary tree
  * Return: 1 incase if another level exists otherwise 0
  */
@@ -43,10 +43,10 @@ int binary_tree_balance_d(const binary_tree_t *tree)
  */
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
-    int balance = binary_tree_balance_d(tree);
+	int balance = binary_tree_balance_d(tree);
 
-    if (tree == NULL)
-        return (0);
+	if (tree == NULL)
+		return (0);
 
-    return (balance == 0? 1 : 0);
+	return (balance == 0 ? 1 : 0);
 }
