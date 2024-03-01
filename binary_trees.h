@@ -95,4 +95,8 @@ binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 /* 104-binary_tree_rotate_right.c */
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
 
+/* BST */
+bst_t *bst_search(const bst_t *tree, int value);
+
+
 #endif /* End of binary_trees.h */
